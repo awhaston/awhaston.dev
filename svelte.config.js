@@ -9,11 +9,12 @@ const config = {
 			base: dev ? '' : '/awhaston.dev',
 		},
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: '200.html',
+			pages: 'docs',
+			assets: 'docs',
+			fallback: null,
 			precompress: false,
-			strict: true
+			domain: '',
+			jekyll: false
 		})
 	}
 };

@@ -1,7 +1,7 @@
 <script>
 	import Nav from '../components/Nav.svelte';
 	export const prerender = true;
-	export const ssr = false
+
 
 	let scroll;
 </script>

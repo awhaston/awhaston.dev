@@ -1,6 +1,5 @@
 <script>
 	import Nav from '../components/Nav.svelte';
-	export const prerender = true;
 
 
 	let scroll;

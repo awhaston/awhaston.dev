@@ -1,8 +1,8 @@
-import cloudflare from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-cloudflare';
 
 export default {
   kit: {
-    adapter: cloudflare()
+    adapter: adapter()
   }
 };
 

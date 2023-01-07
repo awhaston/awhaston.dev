@@ -1,5 +1,26 @@
 <section class="g-job">
-	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	<h2>Information Technology Manager</h2>
+	<h4>August 2019 - November 2021</h4>
+	<p>
+		During August 2019 - November 2021, I worked with Family Resource Agency as an Information
+		Technology Specialist. Family Resource Agency is a nonprofit that receives federal government
+		grants to serve the Headstart program to underprivileged children in Tennessee and North Georgia
+		area.
+	</p>
+	<ul>
+		<li>Manage computers and iPads with Azure Active Directory and Microsoft Intune</li>
+		<li>Manage identities with Azure Active Directory and on-prem Active Directory</li>
+		<li>Manage tickets on the company Help-desk</li>
+		<li>Provide technical support for Windows 10 and iPadOS to over 300 end-users</li>
+		<li>Prepping staff with new computers and iPads</li>
+		<li>Managing the location on inventoried items physically and digitally</li>
+		<li>Manage Ubiquity cameras and NVRs</li>
+		<li>
+			Troubleshoot issues with switches, cameras, WiFi Access Points, UPS’s, routers, and NVRs
+		</li>
+		<li>Conduct majority of in-person user interactions to staff for the IT Department</li>
+		<li>Meeting with vendors with network cable, access point, and camera installations</li>
+	</ul>
 </section>
 
 <style>

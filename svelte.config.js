@@ -8,7 +8,6 @@ const config = {
 		paths: {
 			base: dev ? '' : '/awhaston.dev',
 		},
-		appDir: 'internal',
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',

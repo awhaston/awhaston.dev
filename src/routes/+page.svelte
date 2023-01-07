@@ -1,6 +1,4 @@
 <script>
-	import { get_all_dirty_from_scope } from 'svelte/internal';
-
 	import AboutMe from '../components/AboutMe.svelte';
 	import Family from '../components/Family.svelte';
 	import GithubIcon from '../components/GithubIcon.svelte';
@@ -9,6 +7,7 @@
 	import ContactMe from '../components/ContactMe.svelte';
 	import { fade } from 'svelte/transition';
 	import IntersectingObserver from '../components/IntersectingObserver.svelte';
+	import Icon from '$lib/assets/profile.jpeg';
 
 	const iconSize = '40';
 	let y;
@@ -18,7 +17,7 @@
 <main>
 	<section class="heading">
 		<span class="title">Wyatt Haston</span>
-		<img src="src/assets/profile.jpeg" alt="me" />
+		<img src={Icon} alt="Profile" />
 		<span class="description">
 			Information Technology Undergraduate<br /> Dev-Ops Intern at Sielox LLC
 		</span>
@@ -28,7 +27,7 @@
 		</span>
 	</section>
 
-	<IntersectingObserver let:intersecting once=true top={0}>
+	<IntersectingObserver let:intersecting once="true" top={0}>
 		{#if intersecting}
 			<section id="aboutme" class="aboutme">
 				<AboutMe />
@@ -39,14 +38,14 @@
 	<div id="work" class="work-div">
 		<h2 class="wh">Work History</h2>
 		<section class="work">
-			<IntersectingObserver let:intersecting once=true top={0}>
+			<IntersectingObserver let:intersecting once="true" top={0}>
 				{#if intersecting}
 					<Sielox />
 				{/if}
 			</IntersectingObserver>
 			<div />
 			<div />
-			<IntersectingObserver let:intersecting once=true top={100}>
+			<IntersectingObserver let:intersecting once="true" top={100}>
 				{#if intersecting}
 					<Family />
 				{/if}

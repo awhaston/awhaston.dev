@@ -2,6 +2,7 @@
 	"name": "resume-site",
 	"version": "0.0.1",
 	"private": true,
+	"homepage": ".",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

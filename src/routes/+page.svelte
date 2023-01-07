@@ -7,6 +7,7 @@
 	import ContactMe from '../components/ContactMe.svelte';
 	import { fade } from 'svelte/transition';
 	import IntersectingObserver from '../components/IntersectingObserver.svelte';
+	import MailIcon from '../components/MailIcon.svelte';
 	import Icon from '$lib/assets/profile.jpeg';
 
 	const iconSize = '40';
@@ -24,6 +25,7 @@
 		<span class="icons">
 			<LinkedIn {iconSize} />
 			<GithubIcon {iconSize} />
+			<MailIcon {iconSize} />
 		</span>
 	</section>
 
@@ -131,5 +133,7 @@
 	.icons {
 		margin-top: 1rem;
 		justify-content: center;
+		align-items: center;
+		align-content: center;
 	}
 </style>

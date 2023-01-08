@@ -1,11 +1,8 @@
 <script>
-	import AboutMe from '../components/AboutMe.svelte';
 	import Family from '../components/Family.svelte';
 	import GithubIcon from '../components/GithubIcon.svelte';
 	import LinkedIn from '../components/LinkedIn.svelte';
 	import Sielox from '../components/Sielox.svelte';
-	import ContactMe from '../components/ContactMe.svelte';
-	import { fade } from 'svelte/transition';
 	import IntersectingObserver from '../components/IntersectingObserver.svelte';
 	import MailIcon from '../components/MailIcon.svelte';
 	import Homepage from '../components/Homepage.svelte';

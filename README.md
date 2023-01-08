@@ -1,6 +1,6 @@
 This is the repository for my website hosted on https://www.awhaston.dev
 
-###TODO  
+# TODO  
 ✔️ Redo Homepage  
 Add Education Section  
 Add Certification Section  

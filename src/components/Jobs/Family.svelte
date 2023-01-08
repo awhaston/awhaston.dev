@@ -4,7 +4,7 @@
 	<p>
 		During August 2019 - November 2021, I worked with Family Resource Agency as an Information
 		Technology Specialist. Family Resource Agency is a nonprofit that receives federal government
-		grants to serve the Headstart program to underprivileged children in Tennessee and North Georgia
+		grants to serve the Headstart program to underprivileged children in the Tennessee and North Georgia
 		area.
 	</p>
 	<ul>

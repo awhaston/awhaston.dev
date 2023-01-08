@@ -36,6 +36,8 @@
 		font-family: 'Roboto', sans-serif;
 		background-color: #212121;
 		letter-spacing: 1px;
+		margin: 0;
+		padding: 0;
 	}
 
 	:global(html) {

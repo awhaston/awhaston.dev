@@ -1,16 +1,13 @@
 <script>
-	import Icon from '$lib/assets/profile.jpeg';
+
 </script>
 
-<h1>Wyatt Haston</h1>
+
 <div class="homepage">
-	<img src={Icon} alt="Profile" />
+    <h1>Wyatt Haston</h1>
 	<p>
-		Information Technology Undergrad at Kennesaw State University <br />
-		Dev-Ops Technician Intern at Sielox LLC<br />
-		Hobbyist Web Developer<br />
-		Musician<br />
-		Home Chef
+        Information Technology Student at Kennesaw State University <br>
+		Dev-Ops Intern at Sielox LLC <br>
 	</p>
 </div>
 
@@ -18,14 +15,9 @@
 	.homepage {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
+justify-content: center;
 		align-items: center;
-	}
-
-	img {
-		border-radius: 5px;
-		max-width: 25%;
-		max-height: 25%;
+        height: 80vh;
 	}
 
 	p {

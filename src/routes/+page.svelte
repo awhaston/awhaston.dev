@@ -25,6 +25,7 @@
 		</span>
 	</section>
 
+
 	<div id="work" class="work-div">
 		<h2 class="wh">Work History</h2>
 		<section class="work">
@@ -73,7 +74,7 @@
 		align-items: center;
 		padding-left: 1rem;
 		padding-right: 1rem;
-		padding-bottom: 2rem;
+		height: 100vh;
 	}
 
 	.work-div {

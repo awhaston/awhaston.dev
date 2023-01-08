@@ -1,5 +1,5 @@
 <p>
-    Hello! My name is Wyatt Haston! I am from the Northern Georgia region. I am an Undergraduate Student at Kennesaw State University. Currently I work for Sielox LLC as a Dev-Ops Technician Intern.
+    I am an Undergraduate Student at Kennesaw State University. Currently I work for Sielox LLC as a Dev-Ops Technician Intern.
 </p>
 
 <style>

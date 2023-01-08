@@ -25,8 +25,8 @@
 
 <style>
 	section {
-		animation-name: slide;
-		animation-duration: 5s;
+		animation-name: fadeIn;
+		animation-duration: 2s;
 	}
 
 	@keyframes slide {
@@ -35,6 +35,19 @@
 		}
 		100% {
 			transform: translateX(0);
+		}
+	}
+
+	@keyframes fadeIn {
+		0% {
+			transform: translateY(-20px);
+			opacity: 0;
+			filter: blur(5px);
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+			filter: blur(0);
 		}
 	}
 </style>

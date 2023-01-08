@@ -12,7 +12,6 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-cloudflare": "^1.0.0",
-		"@sveltejs/adapter-static": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",

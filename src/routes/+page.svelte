@@ -8,7 +8,7 @@
 	import { fade } from 'svelte/transition';
 	import IntersectingObserver from '../components/IntersectingObserver.svelte';
 	import MailIcon from '../components/MailIcon.svelte';
-	import Icon from '$lib/assets/profile.jpeg';
+	import Homepage from '../components/Homepage.svelte';
 
 	const iconSize = '40';
 	let y;
@@ -17,25 +17,14 @@
 <svelte:window bind:scrollY={y} />
 <main>
 	<section class="heading">
-		<span class="title">Wyatt Haston</span>
-		<img src={Icon} alt="Profile" />
-		<span class="description">
-			Information Technology Undergraduate<br /> Dev-Ops Intern at Sielox LLC
-		</span>
+		<Homepage />
+
 		<span class="icons">
 			<LinkedIn {iconSize} />
 			<GithubIcon {iconSize} />
 			<MailIcon {iconSize} />
 		</span>
 	</section>
-
-	<IntersectingObserver let:intersecting once="true" top={0}>
-		{#if intersecting}
-			<section id="aboutme" class="aboutme">
-				<AboutMe />
-			</section>
-		{/if}
-	</IntersectingObserver>
 
 	<div id="work" class="work-div">
 		<h2 class="wh">Work History</h2>
@@ -47,7 +36,7 @@
 			</IntersectingObserver>
 			<div />
 			<div />
-			<IntersectingObserver let:intersecting once="true" top={100}>
+			<IntersectingObserver let:intersecting once="true" top={0}>
 				{#if intersecting}
 					<Family />
 				{/if}
@@ -83,16 +72,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		text-align: center;
-		padding: 3rem;
-	}
-
-	.aboutme {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 3rem;
-		margin: auto;
+		padding: 1rem;
+		padding-bottom: 2rem;
 	}
 
 	.work-div {
@@ -109,25 +90,6 @@
 	.wh {
 		text-align: center;
 		margin-bottom: 4rem;
-	}
-
-	main img {
-		border-radius: 5px;
-		max-width: 30%;
-		max-height: 30%;
-		margin: 1rem;
-	}
-
-	.title {
-		font-size: 4rem;
-		margin-bottom: 1rem;
-		font-weight: bold;
-		letter-spacing: 6px;
-	}
-
-	.description {
-		font-size: 1.75rem;
-		line-height: 3rem;
 	}
 
 	.icons {

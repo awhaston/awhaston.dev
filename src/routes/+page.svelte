@@ -1,10 +1,10 @@
 <script>
-	import Family from '../components/Family.svelte';
-	import GithubIcon from '../components/GithubIcon.svelte';
-	import LinkedIn from '../components/LinkedIn.svelte';
-	import Sielox from '../components/Sielox.svelte';
+	import Family from '../components/Jobs/Family.svelte';
+	import GithubIcon from '../components/Icons/GithubIcon.svelte';
+	import LinkedIn from '../components/Icons/LinkedIn.svelte';
+	import Sielox from '../components/Jobs/Sielox.svelte';
 	import IntersectingObserver from '../components/IntersectingObserver.svelte';
-	import MailIcon from '../components/MailIcon.svelte';
+	import MailIcon from '../components/Icons/MailIcon.svelte';
 	import Homepage from '../components/Homepage.svelte';
 
 	const iconSize = '40';

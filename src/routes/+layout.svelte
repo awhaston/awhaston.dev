@@ -1,18 +1,20 @@
 <script>
-	import Nav from '../components/Nav.svelte';
-
-
 	let scroll;
 </script>
 
 <svelte:window bind:scrollY={scroll} />
 
 <div class="background">
-	{#if scroll >= 80}
-		<Nav />
-	{/if}
 	<slot />
+	{#if scroll >= 50}
+		<span class="return">
+			<a href="/#">
+				Return to top
+			</a>
+		</span>
+	{/if}
 </div>
+
 <ul class="circles">
 	<li />
 	<li />
@@ -50,6 +52,21 @@
 	.background {
 		object-fit: cover;
 		overflow: hidden;
+	}
+
+	.return {
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		padding: 1rem;
+		background-color: #424242;
+		border-radius: 5px;
+		animation: fadeIn 1s;
+	}
+
+	.return a {
+		color: inherit;
+		text-decoration: none;
 	}
 
 	.circles {
@@ -147,6 +164,15 @@
 		height: 150px;
 		animation-delay: 0s;
 		animation-duration: 11s;
+	}
+
+	@keyframes fadeIn{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
 	}
 
 	@keyframes animate {

@@ -10,7 +10,7 @@
 	const iconSize = '40';
 	let y;
 	let w;
-	let smallScreenSize = 900;
+
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -24,15 +24,15 @@
 		</span>
 	</section>
 
-	<div id="work" class={w > {smallScreenSize} ? 'work-div' : 'work-small'}>
+	<div id="work" class={w > 900 ? 'work-div' : 'work-small'}>
 		<h2 class="wh">Work History</h2>
-		<section class={w > {smallScreenSize} ? 'work' : 'work-small'}>
+		<section class={w > 900 ? 'work' : 'work-small'}>
 			<IntersectingObserver let:intersecting once="true" top={0}>
 				{#if intersecting}
 					<Sielox />
 				{/if}
 			</IntersectingObserver>
-			{#if w > {smallScreenSize}}
+			{#if w > 900}
 				<div />
 				<div />
 			{/if}

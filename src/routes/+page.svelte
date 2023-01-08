@@ -1,16 +1,46 @@
 <script>
-	import Family from '../components/Jobs/Family.svelte';
 	import GithubIcon from '../components/Icons/GithubIcon.svelte';
 	import LinkedIn from '../components/Icons/LinkedIn.svelte';
-	import Sielox from '../components/Jobs/Sielox.svelte';
 	import IntersectingObserver from '../components/IntersectingObserver.svelte';
 	import MailIcon from '../components/Icons/MailIcon.svelte';
 	import Homepage from '../components/Homepage.svelte';
+	import Job from '../components/Job.svelte';
 
 	const iconSize = '40';
 	let y;
 	let w;
 
+	const familyJob = {
+		title: 'Information Technology Manager',
+		date: 'August 2019 - November 2021',
+		description:
+			'During August 2019 - November 2021, I worked with Family Resource Agency as an Information Technology Specialist. Family Resource Agency is a nonprofit that receives federal government grants to serve the Headstart program to underprivileged children in the Tennessee and North Georgia area.',
+		tasks: [
+			'Manage computers and iPads with Azure Active Directory and Microsoft Intune',
+			'Manage identities with Azure Active Directory and on-prem Active Directory',
+			'Manage tickets on the company Help-desk',
+			'Provide technical support for Windows 10 and iPadOS to over 300 end-users',
+			'Prepping staff with new computers and iPads',
+			'Managing the location on inventoried items physically and digitally',
+			'Manage Ubiquity cameras and NVRs',
+			'Troubleshoot issues with switches, cameras, WiFi Access Points, UPS’s, routers, and NVRs',
+			'Conduct majority of in-person user interactions to staff for the IT Department',
+			'Meeting with vendors with network cable, access point, and camera installations'
+		]
+	};
+
+	const sielox = {
+		title: 'Development-Operations Technician Intern',
+		date: 'August 2022 - Present',
+		description:
+			"Currently, while getting my bachelor's degree, I am a Dev-Ops Technician at Sielox LLC. Sielox is a company that provides Access Control products to schools and companies with AnyWhere, CLASS, and Pinnacle. I work with the Dev-Ops department to clean up source code and to bring modern source control to the 2 decade old project Pinnacle.",
+		tasks: [
+			'Create YAML files to automate continuous development pipelines',
+			'Write windows batch scripts to copy source code to automate source control',
+			'Remotely connected to Windows 2003 to work with legacy source code',
+			'Create build scripts for Visual Build Pro'
+		]
+	};
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -29,7 +59,7 @@
 		<section class={w > 900 ? 'work' : 'work-small'}>
 			<IntersectingObserver let:intersecting once="true" top={0}>
 				{#if intersecting}
-					<Sielox />
+					<Job job={sielox} />
 				{/if}
 			</IntersectingObserver>
 			{#if w > 900}
@@ -38,7 +68,7 @@
 			{/if}
 			<IntersectingObserver let:intersecting once="true" top={0}>
 				{#if intersecting}
-					<Family />
+					<Job job={familyJob} />
 				{/if}
 			</IntersectingObserver>
 		</section>

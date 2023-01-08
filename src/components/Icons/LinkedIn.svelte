@@ -3,7 +3,7 @@
 	const linkedin = 'https://www.linkedin.com/in/wyatt-h-a20854191/';
 </script>
 
-<a href={linkedin} target=”_blank”>
+<a href={linkedin} target="”_blank”">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width={iconSize}

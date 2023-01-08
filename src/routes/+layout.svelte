@@ -8,9 +8,7 @@
 	<slot />
 	{#if scroll >= 50}
 		<span class="return">
-			<a href="/#">
-				Return to top
-			</a>
+			<a href="/#"> Return to top </a>
 		</span>
 	{/if}
 </div>
@@ -168,11 +166,11 @@
 		animation-duration: 11s;
 	}
 
-	@keyframes fadeIn{
-		0%{
+	@keyframes fadeIn {
+		0% {
 			opacity: 0;
 		}
-		100%{
+		100% {
 			opacity: 1;
 		}
 	}

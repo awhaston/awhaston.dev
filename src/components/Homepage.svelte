@@ -6,7 +6,7 @@
 <div class="homepage">
 	<img src={Icon} alt="Profile" />
 	<ul>
-		<li>I am currently a student at Kennesaw State University pursing Information Technology</li>
+		<li>I am currently a student at Kennesaw State University pursing an Information Technology Degree</li>
 		<li>I work an internship at Sielox LLC as a Dev-Ops Technician</li>
 		<li>Musician</li>
 		<li>Hobbyist Web Developer</li>

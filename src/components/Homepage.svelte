@@ -2,44 +2,38 @@
 	import Icon from '$lib/assets/profile.jpeg';
 </script>
 
-<h1>My name is Wyatt Haston</h1>
+<h1>Wyatt Haston</h1>
 <div class="homepage">
 	<img src={Icon} alt="Profile" />
-	<ul>
-		<li>I am currently a student at Kennesaw State University pursing an Information Technology Degree</li>
-		<li>I work an internship at Sielox LLC as a Dev-Ops Technician</li>
-		<li>Musician</li>
-		<li>Hobbyist Web Developer</li>
-		<li>Home Chef</li>
-		<li>Coffee Enthusiast</li>
-	</ul>
+	<p>
+		Information Technology Undergrad at Kennesaw State University <br />
+		Dev-Ops Technician Intern at Sielox LLC<br />
+		Hobbyist Web Developer<br />
+		Musician<br />
+		Home Chef
+	</p>
 </div>
 
 <style>
 	.homepage {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		padding: 1rem;
-		margin-bottom: 1.5rem;
 	}
 
 	img {
 		border-radius: 5px;
-		max-width: 35%;
-		max-height: 35%;
+		max-width: 25%;
+		max-height: 25%;
 	}
 
-	ul {
-		width: 45%;
-	}
-
-	li {
-		margin-bottom: 2rem;
+	p {
+		margin-bottom: 1rem;
 		font-size: 1.5rem;
 		list-style: none;
-
+		line-height: 2.5rem;
+		text-align: center;
 	}
 
 	h1 {

@@ -18,7 +18,6 @@
 <main>
 	<section class="heading">
 		<Homepage />
-
 		<span class="icons">
 			<LinkedIn {iconSize} />
 			<GithubIcon {iconSize} />
@@ -72,7 +71,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		padding-bottom: 2rem;
 	}
 
@@ -93,7 +93,7 @@
 	}
 
 	.icons {
-		margin-top: 1rem;
+
 		justify-content: center;
 		align-items: center;
 		align-content: center;

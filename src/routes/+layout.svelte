@@ -56,17 +56,17 @@
 
 	.return {
 		position: fixed;
-		bottom: 15px;
+		bottom: 25px;
 		right: 15px;
-		padding: 1rem;
-		background-color: #424242;
-		border-radius: 5px;
-		animation: fadeIn 1s;
 	}
 
 	.return a {
 		color: inherit;
 		text-decoration: none;
+		padding: 1rem;
+		background-color: #424242;
+		border-radius: 5px;
+		animation: fadeIn 1s;
 	}
 
 	.circles {

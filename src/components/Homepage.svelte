@@ -1,13 +1,11 @@
 <script>
-
 </script>
 
-
 <div class="homepage">
-    <h1>Wyatt Haston</h1>
+	<h1>Wyatt Haston</h1>
 	<p>
-        Information Technology Student at Kennesaw State University <br>
-		Dev-Ops Intern at Sielox LLC <br>
+		Information Technology Student at Kennesaw State University <br />
+		Dev-Ops Intern at Sielox LLC <br />
 	</p>
 </div>
 
@@ -15,9 +13,9 @@
 	.homepage {
 		display: flex;
 		flex-direction: column;
-justify-content: center;
+		justify-content: center;
 		align-items: center;
-        height: 80vh;
+		height: 80%;
 	}
 
 	p {

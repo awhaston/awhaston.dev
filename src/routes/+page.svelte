@@ -9,10 +9,11 @@
 
 	const iconSize = '40';
 	let y;
+	let w;
 </script>
 
 <svelte:window bind:scrollY={y} />
-<main>
+<main bind:clientWidth={w}>
 	<section class="heading">
 		<Homepage />
 		<span class="icons">
@@ -22,17 +23,18 @@
 		</span>
 	</section>
 
-
-	<div id="work" class="work-div">
+	<div id="work" class="{w > 800 ? 'work-div' : 'work-small'}">
 		<h2 class="wh">Work History</h2>
-		<section class="work">
+		<section class="{w > 800 ? 'work' : 'work-small'}">
 			<IntersectingObserver let:intersecting once="true" top={0}>
 				{#if intersecting}
 					<Sielox />
 				{/if}
 			</IntersectingObserver>
-			<div />
-			<div />
+			{#if w > 800}
+				<div />
+				<div />
+			{/if}
 			<IntersectingObserver let:intersecting once="true" top={0}>
 				{#if intersecting}
 					<Family />
@@ -85,13 +87,22 @@
 		align-items: center;
 	}
 
+	.work-small{
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: center;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+
 	.wh {
 		text-align: center;
 		margin-bottom: 4rem;
 	}
 
 	.icons {
-
 		justify-content: center;
 		align-items: center;
 		align-content: center;

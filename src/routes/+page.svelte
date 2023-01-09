@@ -87,14 +87,14 @@
 			<div />
 		{/if}
 
-		<Job visible={y > 1178} job={familyJob} />
+		<Job visible={y > 972} job={familyJob} />
 	</section>
 
 	<h2 class="heading">Education</h2>
 
-	<section class="degree">
+	<section class={w > 1150 ? 'degree' : 'degree-small'}>
 		{#each degrees as item}
-			<Degree visible={y > 1846} degree={item} />
+			<Degree visible={y > 1846} small={w > 1150} degree={item} />
 		{/each}
 	</section>
 </main>
@@ -155,6 +155,16 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
+	}
+	.degree-small {
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: center;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
 	}
 
 	.heading {

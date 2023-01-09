@@ -5,6 +5,7 @@
 	import MailIcon from '../components/Icons/MailIcon.svelte';
 	import Homepage from '../components/Homepage.svelte';
 	import Job from '../components/Job.svelte';
+	import Degree from '../components/Degree.svelte';
 
 	const iconSize = '40';
 	let y;
@@ -41,11 +42,34 @@
 			'Create build scripts for Visual Build Pro'
 		]
 	};
+
+	const degrees = [
+		{
+			level: "Bachelor's Degree",
+			name: 'Information Technology',
+			school: 'Kennesaw State University',
+			year: 'Currently Pursing'
+		},
+		{
+			level: "Associate's Degree",
+			name: 'CyberSecurity',
+			school: 'Georgia Northwestern Technical College',
+			year: '2019'
+		},
+		{
+			level: "Associate's Degree",
+			name: 'Networking',
+			school: 'Georgia Northwestern Technical College',
+			year: '2019'
+		}
+	];
+
+	let test = true;
 </script>
 
 <svelte:window bind:scrollY={y} />
 <main bind:clientWidth={w}>
-	<section class="heading">
+	<section class="homepage">
 		<Homepage />
 		<span class="icons">
 			<LinkedIn {iconSize} />
@@ -54,25 +78,25 @@
 		</span>
 	</section>
 
-	<div id="work" class={w > 900 ? 'work-div' : 'work-small'}>
-		<h2 class="wh">Work History</h2>
-		<section class={w > 900 ? 'work' : 'work-small'}>
-			<IntersectingObserver let:intersecting once="true" top={0}>
-				{#if intersecting}
-					<Job job={sielox} />
-				{/if}
-			</IntersectingObserver>
-			{#if w > 900}
-				<div />
-				<div />
-			{/if}
-			<IntersectingObserver let:intersecting once="true" top={0}>
-				{#if intersecting}
-					<Job job={familyJob} />
-				{/if}
-			</IntersectingObserver>
-		</section>
-	</div>
+	<h2 class="heading">Work History</h2>
+	<section class={w > 900 ? 'work' : 'work-small'}>
+		<Job visible={y > 526} job={sielox} />
+
+		{#if w > 900}
+			<div />
+			<div />
+		{/if}
+
+		<Job visible={y > 1178} job={familyJob} />
+	</section>
+
+	<h2 class="heading">Education</h2>
+
+	<section class="degree">
+		{#each degrees as item}
+			<Degree visible={y > 1846} degree={item} />
+		{/each}
+	</section>
 </main>
 
 <style>
@@ -97,7 +121,7 @@
 		}
 	}
 
-	.heading {
+	.homepage {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -107,15 +131,13 @@
 		height: 100vh;
 	}
 
-	.work-div {
-		padding: 3rem;
-	}
-
 	.work {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		justify-items: center;
 		align-items: center;
+		padding-left: 3rem;
+		padding-right: 3rem;
 	}
 
 	.work-small {
@@ -125,9 +147,17 @@
 		align-items: center;
 		margin-left: 1rem;
 		margin-right: 1rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
 	}
 
-	.wh {
+	.degree {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	.heading {
 		text-align: center;
 		margin-bottom: 4rem;
 	}

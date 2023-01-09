@@ -5,6 +5,7 @@
 <svelte:window bind:scrollY={scroll} />
 
 <div class="background">
+	<p style="position:fixed">{scroll}</p>
 	<slot />
 	{#if scroll >= 50}
 		<span class="return">
@@ -40,13 +41,6 @@
 
 	:global(html) {
 		scroll-behavior: smooth;
-	}
-
-	:global(.g-job) {
-		padding: 1.5rem;
-		margin-bottom: 4rem;
-		background-color: #616161;
-		border-radius: 5px;
 	}
 
 	.background {

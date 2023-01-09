@@ -63,8 +63,6 @@
 			year: '2019'
 		}
 	];
-
-	let test = true;
 </script>
 
 <svelte:window bind:scrollY={y} />

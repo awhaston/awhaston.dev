@@ -5,7 +5,7 @@
 <svelte:window bind:scrollY={scroll} />
 
 <div class="background">
-	<!-- <p style="position:fixed">{scroll}</p> -->
+	<p style="position:fixed">{scroll}</p>
 	<slot />
 	{#if scroll >= 50}
 		<span class="return">

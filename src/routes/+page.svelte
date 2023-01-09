@@ -78,7 +78,7 @@
 
 	<h2 class="heading">Work History</h2>
 	<section class={w > 900 ? 'work' : 'work-small'}>
-		<Job visible={y > 526} job={sielox} />
+		<Job visible={y > 320} job={sielox} />
 
 		{#if w > 900}
 			<div />

@@ -7,11 +7,9 @@
 <div class="background">
 	<p style="position:fixed">{scroll}</p>
 	<slot />
-	{#if scroll >= 50}
-		<span class="return">
-			<a href="/#"> Return to top </a>
-		</span>
-	{/if}
+	<span class="return {scroll > 50 ? 'show' : 'hidden'}">
+		<a href="/#"> Return to top </a>
+	</span>
 </div>
 
 <ul class="circles">
@@ -60,7 +58,16 @@
 		padding: 1rem;
 		background-color: #424242;
 		border-radius: 5px;
-		animation: fadeIn 1s;
+	}
+
+	.hidden {
+		opacity: 0;
+		transition: all 0.5s;
+	}
+
+	.show {
+		opacity: 1;
+		transition: all 0.5s;
 	}
 
 	.circles {
@@ -158,15 +165,6 @@
 		height: 150px;
 		animation-delay: 0s;
 		animation-duration: 11s;
-	}
-
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
 	}
 
 	@keyframes animate {

@@ -1,7 +1,6 @@
 <script>
 	import GithubIcon from '../components/Icons/GithubIcon.svelte';
 	import LinkedIn from '../components/Icons/LinkedIn.svelte';
-	import IntersectingObserver from '../components/IntersectingObserver.svelte';
 	import MailIcon from '../components/Icons/MailIcon.svelte';
 	import Homepage from '../components/Homepage.svelte';
 	import Job from '../components/Job.svelte';

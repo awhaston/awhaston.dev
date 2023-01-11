@@ -5,6 +5,7 @@
 	import Homepage from '../components/Homepage.svelte';
 	import Job from '../components/Job.svelte';
 	import Degree from '../components/Degree.svelte';
+	import Certification from '../components/Certification.svelte';
 
 	const iconSize = '40';
 	let y;
@@ -44,24 +45,26 @@
 
 	const degrees = [
 		{
-			level: "Bachelor's Degree",
+			level: "Bachelor's Degree:",
 			name: 'Information Technology',
 			school: 'Kennesaw State University',
 			year: 'Currently Pursing'
 		},
 		{
-			level: "Associate's Degree",
+			level: "Associate's Degree:",
 			name: 'CyberSecurity',
 			school: 'Georgia Northwestern Technical College',
 			year: '2019'
 		},
 		{
-			level: "Associate's Degree",
+			level: "Associate's Degree:",
 			name: 'Networking',
 			school: 'Georgia Northwestern Technical College',
 			year: '2019'
 		}
 	];
+
+	const certifications = [];
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -92,6 +95,12 @@
 	<section class={w > 1150 ? 'degree' : 'degree-small'}>
 		{#each degrees as item}
 			<Degree visible={y > 1846} small={w > 1150} degree={item} />
+		{/each}
+	</section>
+
+	<section class={w > 1150 ? 'certifications' : 'certification-small'}>
+		{#each certifications as item}
+			<Certification certification={item} visible={y > 2000} />
 		{/each}
 	</section>
 </main>
@@ -162,6 +171,14 @@
 		margin-right: 1rem;
 		padding-left: 3rem;
 		padding-right: 3rem;
+	}
+
+	.certification{
+
+	}
+
+	.certification-small{
+
 	}
 
 	.heading {

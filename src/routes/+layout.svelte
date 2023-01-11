@@ -5,7 +5,6 @@
 <svelte:window bind:scrollY={scroll} />
 
 <div class="background">
-	<p style="position:fixed">{scroll}</p>
 	<slot />
 	<span class="return {scroll > 50 ? 'show' : 'hidden'}">
 		<a href="/#"> Return to top </a>

@@ -70,35 +70,35 @@
 			title: 'IT Fundamentals+',
 			company: 'CompTIA',
 			year: '2018',
-			icon: 'src/assets/itf.jpg',
+			icon: 'src/lib/assets/itf.jpg',
 			code: 'COMP001021308633'
 		},
 		{
 			title: 'Security Pro',
 			company: 'Testout',
 			year: '2017',
-			icon: 'src/assets/testout.png',
+			icon: 'src/lib/assets/testout.png',
 			code: 'C2KAR'
 		},
 		{
 			title: 'CISCO Network Specialist',
 			company: 'GNTC',
 			year: '2018',
-			icon: 'src/assets/gntc.jpg',
+			icon: 'src/lib/assets/gntc.jpg',
 			code: ''
 		},
 		{
 			title: 'PC Repair and Network Technician',
 			company: 'GNTC',
 			year: '2018',
-			icon: 'src/assets/gntc.jpg',
+			icon: 'src/lib/assets/gntc.jpg',
 			code: ''
 		},
 		{
 			title: 'Computer Forensics and Security Specialist',
 			company: 'GNTC',
 			year: '2018',
-			icon: 'src/assets/gntc.jpg',
+			icon: 'src/lib/assets/gntc.jpg',
 			code: ''
 		}
 	];

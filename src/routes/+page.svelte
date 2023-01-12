@@ -11,37 +11,38 @@
 	let y;
 	let w;
 
-	const familyJob = {
-		title: 'Information Technology Manager',
-		date: 'August 2019 - November 2021',
-		description:
-			'During August 2019 - November 2021, I worked with Family Resource Agency as an Information Technology Specialist. Family Resource Agency is a nonprofit that receives federal government grants to serve the Headstart program to underprivileged children in the Tennessee and North Georgia area.',
-		tasks: [
-			'Manage computers and iPads with Azure Active Directory and Microsoft Intune',
-			'Manage identities with Azure Active Directory and on-prem Active Directory',
-			'Manage tickets on the company Help-desk',
-			'Provide technical support for Windows 10 and iPadOS to over 300 end-users',
-			'Prepping staff with new computers and iPads',
-			'Managing the location on inventoried items physically and digitally',
-			'Manage Ubiquity cameras and NVRs',
-			'Troubleshoot issues with switches, cameras, WiFi Access Points, UPS’s, routers, and NVRs',
-			'Conduct majority of in-person user interactions to staff for the IT Department',
-			'Meeting with vendors with network cable, access point, and camera installations'
-		]
-	};
-
-	const sielox = {
-		title: 'Development-Operations Technician Intern',
-		date: 'August 2022 - Present',
-		description:
-			"Currently, while getting my bachelor's degree, I am a Dev-Ops Technician at Sielox LLC. Sielox is a company that provides Access Control products to schools and companies with AnyWhere, CLASS, and Pinnacle. I work with the Dev-Ops department to clean up source code and to bring modern source control to the 2 decade old project Pinnacle.",
-		tasks: [
-			'Create YAML files to automate continuous development pipelines',
-			'Write windows batch scripts to copy source code to automate source control',
-			'Remotely connected to Windows 2003 to work with legacy source code',
-			'Create build scripts for Visual Build Pro'
-		]
-	};
+	const jobs = [
+		{
+			title: 'Information Technology Manager',
+			date: 'August 2019 - November 2021',
+			description:
+				'During August 2019 - November 2021, I worked with Family Resource Agency as an Information Technology Specialist. Family Resource Agency is a nonprofit that receives federal government grants to serve the Headstart program to underprivileged children in the Tennessee and North Georgia area.',
+			tasks: [
+				'Manage computers and iPads with Azure Active Directory and Microsoft Intune',
+				'Manage identities with Azure Active Directory and on-prem Active Directory',
+				'Manage tickets on the company Help-desk',
+				'Provide technical support for Windows 10 and iPadOS to over 300 end-users',
+				'Prepping staff with new computers and iPads',
+				'Managing the location on inventoried items physically and digitally',
+				'Manage Ubiquity cameras and NVRs',
+				'Troubleshoot issues with switches, cameras, WiFi Access Points, UPS’s, routers, and NVRs',
+				'Conduct majority of in-person user interactions to staff for the IT Department',
+				'Meeting with vendors with network cable, access point, and camera installations'
+			]
+		},
+		{
+			title: 'Development-Operations Technician Intern',
+			date: 'August 2022 - Present',
+			description:
+				"Currently, while getting my bachelor's degree, I am a Dev-Ops Technician at Sielox LLC. Sielox is a company that provides Access Control products to schools and companies with AnyWhere, CLASS, and Pinnacle. I work with the Dev-Ops department to clean up source code and to bring modern source control to the 2 decade old project Pinnacle.",
+			tasks: [
+				'Create YAML files to automate continuous development pipelines',
+				'Write windows batch scripts to copy source code to automate source control',
+				'Remotely connected to Windows 2003 to work with legacy source code',
+				'Create build scripts for Visual Build Pro'
+			]
+		}
+	];
 
 	const degrees = [
 		{
@@ -64,7 +65,43 @@
 		}
 	];
 
-	const certifications = [];
+	const certifications = [
+		{
+			title: 'IT Fundamentals+',
+			company: 'CompTIA',
+			year: '2018',
+			icon: 'src/assets/itf.jpg',
+			code: 'COMP001021308633'
+		},
+		{
+			title: 'Security Pro',
+			company: 'Testout',
+			year: '2017',
+			icon: 'src/assets/testout.png',
+			code: 'C2KAR'
+		},
+		{
+			title: 'CISCO Network Specialist',
+			company: 'GNTC',
+			year: '2018',
+			icon: 'src/assets/gntc.jpg',
+			code: ''
+		},
+		{
+			title: 'PC Repair and Network Technician',
+			company: 'GNTC',
+			year: '2018',
+			icon: 'src/assets/gntc.jpg',
+			code: ''
+		},
+		{
+			title: 'Computer Forensics and Security Specialist',
+			company: 'GNTC',
+			year: '2018',
+			icon: 'src/assets/gntc.jpg',
+			code: ''
+		}
+	];
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -78,29 +115,30 @@
 		</span>
 	</section>
 
-	<h2 class="heading">Work History</h2>
+	<h2 class="heading">Work Experience</h2>
 	<section class={w > 900 ? 'work' : 'work-small'}>
-		<Job visible={y > 320} job={sielox} />
+		<Job visible={y > 320} job={jobs[1]} />
 
 		{#if w > 900}
 			<div />
 			<div />
 		{/if}
 
-		<Job visible={y > 972} job={familyJob} />
+		<Job visible={y > 972} job={jobs[0]} />
 	</section>
 
 	<h2 class="heading">Education</h2>
 
 	<section class={w > 1150 ? 'degree' : 'degree-small'}>
 		{#each degrees as item}
-			<Degree visible={y > 1846} small={w > 1150} degree={item} />
+			<Degree visible={y > 1846} degree={item} />
 		{/each}
 	</section>
 
-	<section class={w > 1150 ? 'certifications' : 'certification-small'}>
+	<h2 class="heading">License and Certifications</h2>
+	<section class={w > 1150 ? 'cert' : 'cert-small'}>
 		{#each certifications as item}
-			<Certification certification={item} visible={y > 2000} />
+			<Certification certification={item} visible={y > 2259} />
 		{/each}
 	</section>
 </main>
@@ -173,12 +211,12 @@
 		padding-right: 3rem;
 	}
 
-	.certification{
-
-	}
-
-	.certification-small{
-
+	.cert {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 4fr));
+		justify-content: center;
+		justify-items: center;
 	}
 
 	.heading {

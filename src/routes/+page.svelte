@@ -6,6 +6,10 @@
 	import Job from '../components/Job.svelte';
 	import Degree from '../components/Degree.svelte';
 	import Certification from '../components/Certification.svelte';
+	import itf from '../lib/assets/itf.jpg';
+	import gntc from '../lib/assets/gntc.jpg';
+	import testout from '../lib/assets/testout.png';
+
 
 	const iconSize = '40';
 	let y;
@@ -70,35 +74,35 @@
 			title: 'IT Fundamentals+',
 			company: 'CompTIA',
 			year: '2018',
-			icon: 'src/lib/assets/itf.jpg',
+			icon: itf,
 			code: 'COMP001021308633'
 		},
 		{
 			title: 'Security Pro',
 			company: 'Testout',
 			year: '2017',
-			icon: 'src/lib/assets/testout.png',
+			icon: testout,
 			code: 'C2KAR'
 		},
 		{
 			title: 'CISCO Network Specialist',
 			company: 'GNTC',
 			year: '2018',
-			icon: 'src/lib/assets/gntc.jpg',
+			icon: gntc,
 			code: ''
 		},
 		{
 			title: 'PC Repair and Network Technician',
 			company: 'GNTC',
 			year: '2018',
-			icon: 'src/lib/assets/gntc.jpg',
+			icon: gntc,
 			code: ''
 		},
 		{
 			title: 'Computer Forensics and Security Specialist',
 			company: 'GNTC',
 			year: '2018',
-			icon: 'src/lib/assets/gntc.jpg',
+			icon: gntc,
 			code: ''
 		}
 	];

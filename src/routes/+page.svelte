@@ -218,9 +218,12 @@
 	.cert {
 		display: grid;
 		gap: 2rem;
+		margin-bottom: 3rem;
 		grid-template-columns: repeat(auto-fit, minmax(350px, 4fr));
 		justify-content: center;
 		justify-items: center;
+		align-items: center;
+		align-content: center;
 	}
 
 	.heading {

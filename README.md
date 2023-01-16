@@ -1,8 +1,6 @@
 This is the repository for my website hosted on https://www.awhaston.dev
 
-# Technologies used for the website
-Sveltekit
-Vanilla CSS
+This website was build using Sveltekit and vanilla CSS
 
 # TODO  
 ✔️ Redo Homepage  

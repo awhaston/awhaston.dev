@@ -1,5 +1,9 @@
 This is the repository for my website hosted on https://www.awhaston.dev
 
+# Technologies used for the website
+Sveltekit
+Vanilla CSS
+
 # TODO  
 ✔️ Redo Homepage  
 ✔️ Add Education Section  

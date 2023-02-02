@@ -1,10 +1,10 @@
 <script>
 	export let iconSize;
-	const github = 'mailto:	awhastonemailer@gmail.com';
+	const mail = 'mailto:	whastonjobs@icloud.com';
 	export const ssr = false;
 </script>
 
-<a href={github} target="”_blank”">
+<a href={mail} target="”_blank”">
 	<svg
 		fill="#ffffff"
 		height={iconSize}

@@ -17,7 +17,7 @@
 		<li>Linux command line</li>
 		<li>Git</li>
 		<li>Office 365 suite</li>
-		<li>Comfortable communicating remotely with Teams</li>
+		<li>Communicating remotely with Teams</li>
 	</ul>
 </div>
 
@@ -25,5 +25,12 @@
 	.container {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+	}
+	h3 {
+		text-align: center;
+	}
+	li {
+		list-style-type: none;
 	}
 </style>

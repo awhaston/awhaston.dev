@@ -3,8 +3,9 @@
 
 <div class="homepage">
 	<h1>Wyatt Haston</h1>
+	<h2>Web Developer</h2>
 	<p>
-		Information Technology Student at Kennesaw State University <br />
+		Information Technology Major at Kennesaw State University <br />
 		Dev-Ops Intern at Sielox LLC <br />
 	</p>
 </div>
@@ -28,5 +29,10 @@
 
 	h1 {
 		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		font-weight: normal;
 	}
 </style>

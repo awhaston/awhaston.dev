@@ -60,10 +60,6 @@
 		display: flex;
 		align-items: center;
 	}
-	.arrow {
-		margin-right: 1rem;
-		transform: rotate(-90deg);
-	}
 	.overflow {
 		margin-top: 1rem;
 		font-size: large;

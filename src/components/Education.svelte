@@ -1,6 +1,6 @@
 <script>
 	import gntc from '../lib/assets/gntc.jpg';
-	import ksu from '../lib/assets/kennesaw.svg.png';
+	import ksu from '../lib/assets/ksu.png';
 	const degrees = [
 		{
 			level: "Bachelor's Degree:",

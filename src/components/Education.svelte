@@ -1,12 +1,13 @@
 <script>
 	import gntc from '../lib/assets/gntc.jpg';
+	import ksu from '../lib/assets/kennesaw.svg.png';
 	const degrees = [
 		{
 			level: "Bachelor's Degree:",
 			name: 'Information Technology',
 			school: 'Kennesaw State University',
 			year: '2021 - Present',
-			icon: gntc
+			icon: ksu
 		},
 		{
 			level: "Associate's Degree:",

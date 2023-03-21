@@ -1,7 +1,6 @@
 <script>
 	export let iconSize;
 	const mail = 'mailto:	whastonjobs@icloud.com';
-	export const ssr = false;
 </script>
 
 <a href={mail} target="”_blank”">
@@ -31,7 +30,6 @@
 
 	a svg {
 		transition: all 0.1s ease-in-out;
-
 	}
 
 	a svg:hover {

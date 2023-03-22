@@ -89,6 +89,9 @@
 		color: white;
 		transition: all 300ms;
 	}
+	.selected {
+		filter: opacity(1);
+	}
 	.nav:hover {
 		filter: opacity(1);
 	}

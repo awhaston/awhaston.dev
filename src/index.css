@@ -1,0 +1,9 @@
+:root {
+	--taskbar-color: #007bef;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}

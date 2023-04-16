@@ -1,0 +1,10 @@
+.taskbar {
+	position: absolute;
+	height: 50px;
+	width: 100vw;
+	bottom: 0;
+	background-color: var(--taskbar-color);
+	inherit: none;
+	display: flex;
+	justify-self: center;
+}

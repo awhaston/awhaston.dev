@@ -18,8 +18,9 @@ function Window(props: any) {
 
         const taskbar = taskbarRef.current;
         const window = windowRef.current;
+        const desktop = windowRef.current.parentNode;
 
-        const onMouseUp = (e: MouseEvent) => {
+        const onMouseUp = () => {
             isClicked.current = false;
 
             coords.current.lastX = window.offsetLeft;
@@ -27,7 +28,6 @@ function Window(props: any) {
         };
 
         const onMouseDown = (e: MouseEvent) => {
-            console.log(e.buttons);
             isClicked.current = true;
             coords.current.startX = e.clientX;
             coords.current.startY = e.clientY;
@@ -38,21 +38,40 @@ function Window(props: any) {
 
             const nextX = e.clientX - coords.current.startX + coords.current.lastX;
             const nextY = e.clientY - coords.current.startY + coords.current.lastY;
+            const maxX = document.body.clientWidth - window.offsetWidth;
+            const maxY = document.body.clientHeight - window.offsetHeight;
 
-            window.style.left = `${nextX}px`;
-            window.style.top = `${nextY}px`;
+            if (nextX < 0) {
+                window.style.left = '0';
+            } else if (nextX > maxX) {
+                window.style.left = `${maxX}px`;
+            } else {
+                window.style.left = `${nextX}px`;
+            }
+
+            if (nextY < 0) {
+                window.style.top = '0';
+            } else if (nextY > maxY) {
+                window.style.top = `${maxY}px`;
+            } else {
+                window.style.top = `${nextY}px`;
+            }
         };
 
         taskbar.addEventListener('mousedown', onMouseDown);
-        taskbar.addEventListener('mouseup', onMouseUp);
-        taskbar.addEventListener('mousemove', onMouseMove);
-        taskbar.addEventListener('mouseleave', onMouseUp);
+        document.addEventListener('mouseup', onMouseUp);
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseleave', onMouseUp);
+        document.addEventListener('blur', onMouseUp);
+        desktop!.addEventListener('mouseleave', onMouseUp);
 
         const cleanUp = () => {
             taskbar.removeEventListener('mousedown', onMouseDown);
-            taskbar.removeEventListener('mouseup', onMouseUp);
-            taskbar.removeEventListener('mousemove', onMouseMove);
-            taskbar.removeEventListener('mouseleave', onMouseUp);
+            document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseleave', onMouseUp);
+            desktop!.removeEventListener('mouseleave', onMouseUp);
+            document.removeEventListener('blur', onMouseUp);
         };
 
         return cleanUp;

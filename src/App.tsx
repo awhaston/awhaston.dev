@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import styles from './App.module.css';
 import Taskbar from './components/Taskbar/Taskbar';
-import Window from './components/Taskbar/Window/Window';
+import Window from './components/Window/Window';
 
 function App() {
+    const [window, setWindow] = useState([]);
+
     return (
         <div className={styles.desktop}>
-            <Window></Window>
             <Window></Window>
             <Taskbar></Taskbar>
         </div>

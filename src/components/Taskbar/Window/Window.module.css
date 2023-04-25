@@ -1,0 +1,40 @@
+.windowContainer {
+	position: absolute;
+	height: 500px;
+	width: 500px;
+	background-color: blue;
+	top: 0;
+	left: 0;
+}
+
+.topRight,
+.topLeft,
+.bottomRight,
+.bottomLeft {
+	position: absolute;
+	height: 6px;
+	width: 6px;
+	background-color: red;
+}
+
+.topRight {
+	right: 0;
+	cursor: nesw-resize;
+}
+
+.topLeft {
+	left: 0;
+	cursor: nwse-resize;
+}
+
+.bottomRight {
+	bottom: 0;
+	right: 0;
+	cursor: nwse-resize;
+}
+
+.bottomLeft {
+	bottom: 0;
+	left: 0;
+	cursor: nesw-resize;
+}

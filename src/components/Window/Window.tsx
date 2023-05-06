@@ -13,6 +13,27 @@ function Window(props: any) {
         lastY: 0
     });
 
+    // Moving active window to the front
+    useEffect(() => {
+        if (!windowRef.current) return;
+        const window = windowRef.current;
+        if (props.isActive) {
+            window.style.zIndex = '3';
+        } else {
+            window.style.zIndex = '2';
+        }
+    }, [props.isActive]);
+
+    // Set window width/height and draggable divs event listeners
+    useEffect(() => {
+        if (!windowRef.current) return;
+        const window = windowRef.current;
+
+        window.style.height = `${props.height}px`;
+        window.style.width = `${props.width}px`;
+    }, []);
+
+    // Set drag window event listeners
     useEffect(() => {
         if (!windowRef.current || !taskbarRef.current) return;
 
@@ -78,7 +99,7 @@ function Window(props: any) {
     });
 
     return (
-        <div ref={windowRef} className={styles.windowContainer}>
+        <div onMouseDown={props.activeHandler} ref={windowRef} className={styles.windowContainer}>
             <div className={styles.topRight}></div>
             <div className={styles.topLeft}></div>
             <div className={styles.bottomRight}></div>

@@ -7,8 +7,8 @@ interface AppProps {
 interface WindowProps {
     isActive: boolean;
     activeIndex: number;
-    height: number;
-    width: number;
+    height: string;
+    width: string;
     activeHandler: any;
     children: any;
 }

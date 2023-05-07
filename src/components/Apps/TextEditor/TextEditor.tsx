@@ -1,7 +1,7 @@
 import styles from './TextEditor.module.css';
 import Window from '../../Window/Window';
 
-function TextEditor(props: WindowProps) {
+function TextEditor(props: AppProps) {
     return (
         <Window
             activeHandler={props.activeHandler}

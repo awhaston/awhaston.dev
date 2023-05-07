@@ -2,7 +2,7 @@ import styles from './Window.module.css';
 import TopBar from './TopBar';
 import { useEffect, useRef } from 'react';
 
-function Window(props: any) {
+function Window(props: WindowProps) {
     const taskbarRef = useRef<HTMLDivElement>(null);
     const windowRef = useRef<HTMLDivElement>(null);
     const isClicked = useRef<boolean>(false);
@@ -18,9 +18,7 @@ function Window(props: any) {
         if (!windowRef.current) return;
         const window = windowRef.current;
         if (props.isActive) {
-            window.style.zIndex = '3';
-        } else {
-            window.style.zIndex = '2';
+            window.style.zIndex = `${props.activeIndex}`;
         }
     }, [props.isActive]);
 

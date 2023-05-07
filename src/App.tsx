@@ -17,18 +17,21 @@ function App() {
         { id: 1, app: 'TextEditor', isActive: false }
     ]);
 
+    const [activeIndex, setActiveIndex] = useState(1);
+    //const [id, setID] = useState(0);
+
     function handleActive(id: number) {
         const updatedWindows = windows.map((window) => {
             if (window.id === id) {
                 window.isActive = true;
-                console.log(window);
                 return window;
             } else {
                 window.isActive = false;
-                console.log(window);
                 return window;
             }
         });
+
+        setActiveIndex(activeIndex + 1);
 
         setWindows(updatedWindows);
     }
@@ -43,8 +46,11 @@ function App() {
                                 key={index}
                                 isActive={window.isActive}
                                 activeHandler={() => handleActive(window.id)}
+                                activeIndex={activeIndex}
                             />
                         );
+                        break;
+                    default:
                         break;
                 }
             })}

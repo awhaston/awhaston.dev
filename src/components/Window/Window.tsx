@@ -2,6 +2,15 @@ import styles from './Window.module.css';
 import TopBar from './TopBar';
 import { useEffect, useRef } from 'react';
 
+type WindowProps = {
+    isActive: boolean;
+    activeIndex: number;
+    height: string;
+    width: string;
+    activeHandler: any;
+    children: any;
+};
+
 function Window(props: WindowProps) {
     const taskbarRef = useRef<HTMLDivElement>(null);
     const windowRef = useRef<HTMLDivElement>(null);

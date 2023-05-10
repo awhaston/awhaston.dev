@@ -1,14 +1,14 @@
-interface AppProps {
+type AppProps = {
     activeHandler: Function;
     isActive: boolean;
     activeIndex: number;
-}
+};
 
-interface WindowProps {
+type WindowProps = {
     isActive: boolean;
     activeIndex: number;
     height: string;
     width: string;
     activeHandler: any;
     children: any;
-}
+};

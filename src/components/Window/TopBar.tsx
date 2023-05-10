@@ -1,6 +1,14 @@
+import type { LegacyRef, MouseEventHandler } from 'react';
 import styles from './TopBar.module.css';
 
-function TopBar(props: any) {
+type TopBarProps = {
+    innerRef: LegacyRef<HTMLDivElement> | undefined;
+    closeClick: MouseEventHandler;
+    minClick: MouseEventHandler;
+    maxClick: MouseEventHandler;
+};
+
+function TopBar(props: TopBarProps) {
     return (
         <div className={styles.barContainer} ref={props.innerRef}>
             <div className={styles.buttonContainer}>

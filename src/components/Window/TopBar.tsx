@@ -3,9 +3,9 @@ import styles from './TopBar.module.css';
 
 type TopBarProps = {
     innerRef: LegacyRef<HTMLDivElement> | undefined;
-    closeClick: MouseEventHandler;
-    minClick: MouseEventHandler;
-    maxClick: MouseEventHandler;
+    closeClick?: MouseEventHandler;
+    minClick?: MouseEventHandler;
+    maxClick?: MouseEventHandler;
 };
 
 function TopBar(props: TopBarProps) {

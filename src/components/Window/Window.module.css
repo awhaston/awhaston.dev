@@ -21,6 +21,41 @@
 	background-color: red;
 }
 
+.topDrag,
+.bottomDrag,
+.rightDrag,
+.leftDrag {
+	position: absolute;
+	height: calc(100% - 16px);
+	background-color: orange;
+	width: 4px;
+}
+
+.topDrag {
+	top: -49%;
+	right: 49.8%;
+	rotate: 90deg;
+}
+
+.bottomDrag {
+	top: 52%;
+	right: 49.8%;
+	rotate: 90deg;
+}
+
+.rightDrag {
+	right: 0;
+	transform: translateY(8px);
+}
+
+.leftDrag {
+	transform: translateY(8px);
+}
+
+.bottomDrag {
+	bottom: 0;
+}
+
 .topRight {
 	right: 0;
 	cursor: nesw-resize;
@@ -41,4 +76,11 @@
 	bottom: 0;
 	left: 0;
 	cursor: nesw-resize;
+}
+
+.appContainer {
+	position: absolute;
+	display: flex;
+	padding: 4.5px;
+	height: 100%;
 }

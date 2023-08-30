@@ -11,7 +11,10 @@ interface Window {
 }
 
 function App() {
-    const [windows, setWindows] = useState<Window[]>([{ id: 0, app: 'TextEditor', isActive: true }]);
+    const [windows, setWindows] = useState<Window[]>([
+        { id: 0, app: 'TextEditor', isActive: true },
+        { id: 1, app: 'TextEditor', isActive: false }
+    ]);
 
     const [activeIndex, setActiveIndex] = useState(1);
     //const [id, setID] = useState(0);

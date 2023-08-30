@@ -1,3 +1,9 @@
 .textArea {
+	position: absolute;
 	resize: none;
+	border: none;
+	height: 350px;
+	width: 350px;
+	top: 50%;
+	left: 50%;
 }

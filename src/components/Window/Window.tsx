@@ -14,6 +14,10 @@ type WindowProps = {
 function Window(props: WindowProps) {
     const taskbarRef = useRef<HTMLDivElement>(null);
     const windowRef = useRef<HTMLDivElement>(null);
+    const topDragRef = useRef<HTMLDivElement>(null);
+    const bottomDragRef = useRef<HTMLDivElement>(null);
+    const rightDragRef = useRef<HTMLDivElement>(null);
+    const leftDragRef = useRef<HTMLDivElement>(null);
     const isClicked = useRef<boolean>(false);
     const coords = useRef<{ startX: number; startY: number; lastX: number; lastY: number }>({
         startX: 0,
@@ -21,6 +25,8 @@ function Window(props: WindowProps) {
         lastX: 0,
         lastY: 0
     });
+    const isResizeClicked = useRef<boolean>(false);
+    const sideClicked = useRef<string>('');
 
     // Moving active window to the front
     useEffect(() => {
@@ -28,6 +34,9 @@ function Window(props: WindowProps) {
         const window = windowRef.current;
         if (props.isActive) {
             window.style.zIndex = `${props.activeIndex}`;
+            window.style.opacity = '1';
+        } else {
+            window.style.opacity = '0.25';
         }
     }, [props.isActive]);
 
@@ -36,8 +45,88 @@ function Window(props: WindowProps) {
         if (!windowRef.current) return;
         const window = windowRef.current;
 
-        window.style.height = `${props.height}px`;
-        window.style.width = `${props.width}px`;
+        window.style.height = `${props.height}`;
+        window.style.width = `${props.width}`;
+    }, []);
+
+    // Set event listeners for side resize events
+    useEffect(() => {
+        if (
+            !windowRef.current ||
+            !taskbarRef.current ||
+            !topDragRef.current ||
+            !bottomDragRef.current ||
+            !rightDragRef.current ||
+            !leftDragRef.current
+        ) {
+            return;
+        }
+
+        const top = topDragRef.current;
+        const bottom = bottomDragRef.current;
+        const right = rightDragRef.current;
+        const left = leftDragRef.current;
+        const desktop = windowRef.current.parentNode;
+
+        const onMouseUp = () => {
+            isResizeClicked.current = false;
+            sideClicked.current = '';
+        };
+
+        const onMouseDown = (e: MouseEvent) => {
+            switch (e.target) {
+                case top:
+                    sideClicked.current = 'top';
+                    break;
+                case bottom:
+                    sideClicked.current = 'bottom';
+                    break;
+                case right:
+                    sideClicked.current = 'right';
+                    break;
+                case left:
+                    sideClicked.current = 'left';
+                    break;
+            }
+            isResizeClicked.current = true;
+        };
+
+        const onResizeDrag = () => {
+            if (!isResizeClicked || isClicked) return;
+
+            switch (sideClicked.current) {
+                case 'top':
+                    break;
+                case 'bottom':
+                    break;
+                case 'right':
+                    break;
+                case 'left':
+                    break;
+            }
+        };
+
+        top.addEventListener('mousedown', onMouseDown);
+        bottom.addEventListener('mousedown', onMouseDown);
+        right.addEventListener('mousedown', onMouseDown);
+        left.addEventListener('mousedown', onMouseDown);
+        document.addEventListener('mousemove', onResizeDrag);
+        document.addEventListener('mouseleave', onMouseUp);
+        document.addEventListener('mouseup', onMouseUp);
+        document.addEventListener('blur', onMouseUp);
+
+        const cleanUp = () => {
+            top.removeEventListener('mousedown', onMouseDown);
+            bottom.removeEventListener('mousedown', onMouseDown);
+            right.removeEventListener('mousedown', onMouseDown);
+            left.removeEventListener('mousedown', onMouseDown);
+            document.removeEventListener('mousemove', onResizeDrag);
+            document.removeEventListener('mouseleave', onMouseUp);
+            document.removeEventListener('blur', onMouseUp);
+            document.removeEventListener('mouseup', onMouseUp);
+        };
+
+        return cleanUp;
     }, []);
 
     // Set drag window event listeners
@@ -112,9 +201,14 @@ function Window(props: WindowProps) {
             <div className={styles.bottomRight}></div>
             <div className={styles.bottomLeft}></div>
 
+            <div ref={rightDragRef} className={styles.rightDrag}></div>
+            <div ref={leftDragRef} className={styles.leftDrag}></div>
+            <div ref={topDragRef} className={styles.topDrag}></div>
+            <div ref={bottomDragRef} className={styles.bottomDrag}></div>
+
             <TopBar innerRef={taskbarRef} />
 
-            {props.children}
+            <div className={styles.appContainer}>{props.children}</div>
         </div>
     );
 }

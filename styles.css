@@ -1,1 +1,32 @@
+body {
+	height: 100vh;
+	overflow: hidden;
 	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.subtitles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.project-overflow {
+	display: none;
+}
+
+.footer {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	bottom: 0;
+}

@@ -2,6 +2,8 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	font-family: 'Roboto', sans-serif;
+	background-color: #1a1b18;
+	color: #ebebea;
 }
 
 main {
@@ -21,15 +23,34 @@ main {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
-	padding-left: 5px;
+	padding-left: 15px;
+}
+
+h1,
+h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 40px;
 }
 
 .wyatt-img {
-	height: 425px;
+	height: 550px;
 	border-radius: 15px;
 	width: auto;
 }
 
+@media (max-width: 1000px) {
+	.wyatt-img {
+		display: none;
+	}
+}
 .subtitles {
 	display: flex;
 	flex-direction: column;
@@ -39,6 +60,10 @@ ul {
 	inherits: none;
 	list-style-type: none;
 	padding-left: 0;
+	margin-top: 0;
+}
+li {
+	padding-top: 5px;
 }
 
 .title {
@@ -54,13 +79,14 @@ ul {
 }
 
 .link-button {
-	opacity: 0.75;
+	opacity: 0.55;
 	transition: all 0.25s ease-in-out;
 }
 
 .link-button img {
 	width: 50px;
 	height: auto;
+	filter: invert(100%);
 }
 
 .link-button:hover {
@@ -70,4 +96,19 @@ ul {
 
 .project-overflow {
 	display: none;
+}
+
+a:link {
+	color: lightskyblue;
+}
+a:visited {
+	color: #d3bde8;
+}
+a:hover {
+	color: #ffffff;
+}
+a:active {
+	color: #ff4040;
+	text-decoration: none;
+	font-weight: normal;
 }

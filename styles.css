@@ -47,6 +47,10 @@ h2 {
 }
 
 @media (max-width: 1000px) {
+	body {
+		overflow: scroll;
+	}
+
 	.wyatt-img {
 		display: none;
 	}

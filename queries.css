@@ -1,0 +1,13 @@
+@media (max-width: 1000px) {
+	body {
+		overflow: scroll;
+	}
+
+	main {
+		height: 80%;
+	}
+
+	.wyatt-img {
+		display: none;
+	}
+}
